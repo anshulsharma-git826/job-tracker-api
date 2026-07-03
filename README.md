@@ -65,7 +65,7 @@ job-tracker-api/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/job-tracker-api.git
+git clone https://github.com/anshulsharma-git826/job-tracker-api.git
 cd job-tracker-api
 ```
 
@@ -79,8 +79,8 @@ npm install
 
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_jwt_secret_key
+MONGODB_URI="mongodb+srv://anshul3579sharma_db_user:anshul3579sharma@cluster0.bixcnoh.mongodb.net/"
+JWT_SECRET=anshul3579sharma
 ```
 
 ### 4. Run the server
