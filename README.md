@@ -21,15 +21,15 @@ A RESTful backend API built with **Node.js, Express.js, and MongoDB** to track j
 
 ## 🛠️ Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| Node.js | Runtime |
-| Express.js | Web Framework |
-| MongoDB | Database |
-| Mongoose | ODM |
-| JWT | Authentication |
-| bcryptjs | Password Hashing |
-| dotenv | Environment Variables |
+| Technology | Purpose               |
+| ---------- | --------------------- |
+| Node.js    | Runtime               |
+| Express.js | Web Framework         |
+| MongoDB    | Database              |
+| Mongoose   | ODM                   |
+| JWT        | Authentication        |
+| bcryptjs   | Password Hashing      |
+| dotenv     | Environment Variables |
 
 ---
 
@@ -63,17 +63,20 @@ job-tracker-api/
 ## ⚙️ Setup & Installation
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/job-tracker-api.git
 cd job-tracker-api
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Create `.env` file
+
 ```env
 PORT=5000
 MONGODB_URI=your_mongodb_atlas_connection_string
@@ -81,6 +84,7 @@ JWT_SECRET=your_jwt_secret_key
 ```
 
 ### 4. Run the server
+
 ```bash
 # Development
 npm run dev
@@ -95,24 +99,24 @@ npm start
 
 ### Auth Routes
 
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| POST | `/api/auth/register` | Register a new user | ❌ |
-| POST | `/api/auth/login` | Login and get token | ❌ |
-| GET | `/api/auth/profile` | Get logged in user profile | ✅ |
+| Method | Endpoint             | Description                | Auth |
+| ------ | -------------------- | -------------------------- | ---- |
+| POST   | `/api/auth/register` | Register a new user        | ❌   |
+| POST   | `/api/auth/login`    | Login and get token        | ❌   |
+| GET    | `/api/auth/profile`  | Get logged in user profile | ✅   |
 
 ### Job Routes (All Protected)
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/jobs` | Create a job application |
-| GET | `/api/jobs` | Get all jobs (search/filter/sort/paginate) |
-| GET | `/api/jobs/:id` | Get a single job |
-| PUT | `/api/jobs/:id` | Update a job |
-| DELETE | `/api/jobs/:id` | Delete a job |
-| PATCH | `/api/jobs/:id/favorite` | Toggle favorite |
-| PATCH | `/api/jobs/:id/archive` | Toggle archive |
-| GET | `/api/jobs/dashboard` | Get dashboard statistics |
+| Method | Endpoint                 | Description                                |
+| ------ | ------------------------ | ------------------------------------------ |
+| POST   | `/api/jobs`              | Create a job application                   |
+| GET    | `/api/jobs`              | Get all jobs (search/filter/sort/paginate) |
+| GET    | `/api/jobs/:id`          | Get a single job                           |
+| PUT    | `/api/jobs/:id`          | Update a job                               |
+| DELETE | `/api/jobs/:id`          | Delete a job                               |
+| PATCH  | `/api/jobs/:id/favorite` | Toggle favorite                            |
+| PATCH  | `/api/jobs/:id/archive`  | Toggle archive                             |
+| GET    | `/api/jobs/dashboard`    | Get dashboard statistics                   |
 
 ---
 
@@ -128,15 +132,16 @@ GET /api/jobs?search=Google&status=Applied&sort=-appliedDate&page=1&limit=5
 ```
 
 ### Available Sort Options
-| Value | Description |
-|-------|-------------|
-| `salary` | Salary ascending |
-| `-salary` | Salary descending |
-| `company` | Company A-Z |
-| `-company` | Company Z-A |
-| `appliedDate` | Applied date ascending |
+
+| Value          | Description             |
+| -------------- | ----------------------- |
+| `salary`       | Salary ascending        |
+| `-salary`      | Salary descending       |
+| `company`      | Company A-Z             |
+| `-company`     | Company Z-A             |
+| `appliedDate`  | Applied date ascending  |
 | `-appliedDate` | Applied date descending |
-| `-createdAt` | Newest first (default) |
+| `-createdAt`   | Newest first (default)  |
 
 ---
 
@@ -190,4 +195,4 @@ Applied → OA Received → OA Completed → Interview Scheduled
 ## 👤 Author
 
 **Anshul Sharma**  
-[GitHub](https://github.com/anshulsharma-git826) 
+[GitHub](https://github.com/anshulsharma-git826)
